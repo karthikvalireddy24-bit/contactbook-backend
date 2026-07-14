@@ -2,14 +2,22 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
+const dns = require("dns")
+
+dns.setServers(["8.8.8.8","8.8.8.8"])
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:["*", " http://localhost:5173"],
+  methods:['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders:['content-Type', 'Authorization'],
+  credentials:true
+}));
 app.use(express.json());
 
 // MongoDB Connection
 mongoose
-  .connect("mongodb://localhost:27017/contactbook")
+  .connect("mongodb+srv://karthikvalireddy24_db_user:NPAjDjxYNGUIh4ap@cluster0.iuipagl.mongodb.net/contacts?appName=Cluster0")
   .then(() => {
     console.log("Database Connected...");
   })
