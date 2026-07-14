@@ -74,7 +74,7 @@ app.get("/contacts", async (req, res) => {
       };
     }
     
-    const contacts = await Contact.find(query).sort({ createdAt: -1 });
+    const contacts = await Contact.find();
     
     res.json({
       success: true,
