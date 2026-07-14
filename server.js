@@ -9,8 +9,8 @@ const app = express();
 
 app.use(cors({
   origin:["*", "https://contact-book-umber.vercel.app"],
-  methods:['GET','POST','PUT','DELETE','OPTIONS'],
-  allowedHeaders:['content-Type', 'Authorization'],
+  methods:["GET","POST","PUT","DELETE","OPTIONS", "PATCH"],
+  allowedHeaders:["content-Type", "Authorization"],
   credentials:true
 }));
 app.use(express.json());
