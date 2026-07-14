@@ -17,7 +17,7 @@ app.use(express.json());
 
 // MongoDB Connection
 mongoose
-  .connect("mongodb+srv://karthikvalireddy24_db_user:NPAjDjxYNGUIh4ap@cluster0.iuipagl.mongodb.net/contacts?appName=Cluster0")
+  .connect("mongodb+srv://vallireddyprabakar_db_user:YKQpBtOhCEAo3Zzt@cluster0.thryrvd.mongodb.net/Contactbook?appName=Cluster0")
   .then(() => {
     console.log("Database Connected...");
   })
